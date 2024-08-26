@@ -65,7 +65,7 @@ export default function Home() {
               </div>
             ))
           ) : (
-            <h3>No Blogs Added</h3>
+            <h3>No Blogs Written</h3>
           )}
         </div>
       )}

@@ -48,38 +48,39 @@ export default function AddNewBlog() {
   }, [location]);
 
   return (
-    <div className={classes.wrapper}>
-      <h1>{isEdit ? "Edit a Blog" : "Add a Blog"}</h1>
-      <div className={classes.formWrapper}>
-        <input
-          name="title"
-          placeholder="Enter Blog Title"
-          id="title"
-          type="text"
-          value={formData.title}
-          onChange={(e) =>
-            setFormData({
-              ...formData,
-              title: e.target.value,
-            })
-          }
-        />
-        <textarea
-          name="description"
-          placeholder="Enter Blog Description"
-          id="description"
-          value={formData.description}
-          onChange={(event) =>
-            setFormData({
-              ...formData,
-              description: event.target.value,
-            })
-          }
-        />
-        <button onClick={handleSaveBlogToDatabase}>
-          {isEdit ? "Edit Blog" : "Add Blog"}
-        </button>
-      </div>
-    </div>
+<div className={classes.wrapper}>
+  <h1>{isEdit ? "Edit a Blog" : "Write the best blogs, you can !"}</h1>
+  <div className={classes.formWrapper}>
+    <input
+      name="title"
+      placeholder="Enter Blog Title"
+      id="title"
+      type="text"
+      value={formData.title}
+      onChange={(e) =>
+        setFormData({
+          ...formData,
+          title: e.target.value,
+        })
+      }
+    />
+    <textarea
+      name="description"
+      placeholder="Enter Blog Description"
+      id="description"
+      value={formData.description}
+      onChange={(event) =>
+        setFormData({
+          ...formData,
+          description: event.target.value,
+        })
+      }
+    />
+    <button onClick={handleSaveBlogToDatabase}>
+      {isEdit ? "Edit Blog" : "Add Blog"}
+    </button>
+  </div>
+</div>
+
   );
 }

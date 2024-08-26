@@ -1,10 +1,50 @@
+/* Wrapper styling for top-left alignment */
 .wrapper {
-  padding: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f9f9f9; /* Light neutral background */
 }
 
-.formWrapper{
+.wrapper h1 {
+  font-size: 2.5rem;
+  color: #333; /* Dark gray for text */
+  margin-bottom: 20px;
+}
+
+/* Blog list styling */
+.blogList {
+  width: 100%; /* Full width */
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 400px;
+}
+
+/* Individual blog item styling */
+.blogList > div {
+  padding: 15px;
+  background-color: #fff; /* White background for each blog item */
+  border-radius: 5px;
+  border: 1px solid #ddd; /* Light gray border */
+  color: #333; /* Dark gray text */
+}
+
+.blogList p {
+  margin: 0;
+  font-size: 1.25rem; /* Slightly larger text */
+}
+
+/* Icon styling */
+.blogList svg {
+  color: #333; /* Dark gray for icons */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.blogList svg:hover {
+  color: #000; /* Black on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }

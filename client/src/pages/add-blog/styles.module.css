@@ -1,10 +1,100 @@
+/* Center the wrapper and make it responsive */
 .wrapper {
-  padding: 30px;
-}
-
-.formWrapper{
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 400px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #e6f2f2; /* Light teal background for contrast */
+}
+
+.wrapper h1 {
+  font-size: 3rem; /* Larger font size to emphasize the title */
+  color: #004d4d; /* Dark teal color */
+  margin-bottom: 30px;
+  transition: color 0.3s ease-in-out;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%; /* Set width to 50% of the page */
+  background-color: #006666; /* Darker teal background */
+  padding: 30px; /* Increased padding for better spacing */
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for depth */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Input and textarea styling */
+.formWrapper input,
+.formWrapper textarea {
+  padding: 15px; /* Increased padding for larger input area */
+  font-size: 1.5rem; /* Larger text */
+  border: 2px solid #004d4d; /* Dark teal border */
+  border-radius: 6px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.formWrapper input:focus,
+.formWrapper textarea:focus {
+  border-color: #b3ffff; /* Lighter teal on focus */
+  outline: none;
+}
+
+.formWrapper textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 200px; /* Increased minimum height for textarea */
+}
+
+/* Button styling with hover and transition effects */
+.formWrapper button {
+  padding: 15px;
+  font-size: 1.5rem; /* Larger text */
+  color: #fff;
+  background-color: #004d4d; /* Dark teal button */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.formWrapper button:hover {
+  background-color: #008080; /* Brighter teal on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .formWrapper {
+    width: 70%; /* Slightly reduce width on medium screens */
+  }
+
+  .wrapper h1 {
+    font-size: 2.5rem;
+  }
+
+  .formWrapper input,
+  .formWrapper textarea,
+  .formWrapper button {
+    font-size: 1.35rem; /* Slightly smaller for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .formWrapper {
+    width: 90%; /* Nearly full-width on small screens */
+  }
+
+  .wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .formWrapper input,
+  .formWrapper textarea,
+  .formWrapper button {
+    font-size: 1.2rem; /* Smaller for small screens */
+  }
 }
