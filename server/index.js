@@ -15,4 +15,3 @@ app.use("/api", (req, res) => {
 });
 
 app.listen(5000, () => console.log(`App is running at 5000...`));
-/**/
